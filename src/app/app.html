@@ -1,0 +1,24 @@
+<app-background></app-background>
+<div class="content-wrapper overlay">
+  <app-header></app-header>
+  <app-hero></app-hero>
+  <app-skill-cloud></app-skill-cloud>
+  <app-projects></app-projects>
+  <app-experience></app-experience>
+  <app-contact></app-contact>
+  <app-footer></app-footer>
+</div>
+<router-outlet />
+
+<!-- Custom Cursor Follower -->
+<div class="cursor-follower" #cursorFollower></div>
+
+<!-- Back to Top Button -->
+@if (showScrollToTop) {
+<button class="scroll-top-btn glass-card" (click)="scrollToTop()" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6" />
+  </svg>
+</button>
+}

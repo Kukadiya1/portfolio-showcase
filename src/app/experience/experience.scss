@@ -1,0 +1,116 @@
+.experience-section {
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--text-accent), var(--accent-alpha-10));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 80px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 22px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--text-accent);
+    border: 3px solid var(--bg-base);
+    box-shadow: 0 0 10px var(--accent-glow);
+    z-index: 2;
+}
+
+.timeline-content {
+    padding: 2.5rem;
+    position: relative;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--border-light);
+}
+
+.role {
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    font-size: 1.2rem;
+    color: var(--text-accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 12px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+}

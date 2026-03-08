@@ -1,0 +1,13 @@
+<section class="skill-cloud-section" id="skills">
+    <div class="container">
+        <h2 class="section-title"><span class="text-gradient">Core Tech Stack</span></h2>
+        <div class="skills-grid">
+            @for (skill of skills; track skill.name) {
+            <div class="skill-card glass-card">
+                <span class="name">{{ skill.name }}</span>
+                <span class="level">{{ skill.level }}</span>
+            </div>
+            }
+        </div>
+    </div>
+</section>

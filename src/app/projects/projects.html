@@ -1,0 +1,33 @@
+<section class="projects-section" id="projects">
+    <div class="container">
+        <h2 class="section-title"><span class="text-gradient">Featured Projects</span></h2>
+        <div class="projects-grid">
+            @for (project of projects; track project.title) {
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <h3 class="title">{{ project.title }}</h3>
+                    <p class="description">{{ project.description }}</p>
+
+                    @if (project.features && project.features.length > 0) {
+                    <ul class="features-list">
+                        @for (feature of project.features; track feature) {
+                        <li>{{ feature }}</li>
+                        }
+                    </ul>
+                    }
+
+                    <div class="tech-stack mt-auto">
+                        @for (tech of project.techStack; track tech) {
+                        <span class="tech-pill">{{ tech }}</span>
+                        }
+                    </div>
+
+                    @if (project.link) {
+                    <a [href]="project.link" target="_blank" class="view-btn">View Details &nbsp;&rarr;</a>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

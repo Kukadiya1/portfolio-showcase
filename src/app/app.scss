@@ -1,0 +1,73 @@
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* Custom Cursor Follower */
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--accent-alpha-20);
+    border: 1px solid var(--text-accent);
+    pointer-events: none;
+    /* Let clicks pass through! */
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-100px, -100px);
+    /* Hide until mouse moves */
+    display: none;
+    /* Hide by default on mobile */
+}
+
+@media (pointer: fine) {
+    .cursor-follower {
+        display: block; // Only show devices with fine pointers
+    }
+}
+
+/* Back to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-card-bg);
+    border: 1px solid var(--border-light);
+    color: var(--text-accent);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        background: var(--accent-alpha-10);
+        border-color: var(--accent-alpha-30);
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}

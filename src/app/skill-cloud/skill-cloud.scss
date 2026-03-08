@@ -1,0 +1,68 @@
+.skill-cloud-section {
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    padding: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 200px;
+    /* Uniform width for all chips */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    background: var(--glass-card-bg);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--glass-shadow);
+
+    .name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .level {
+        font-size: 0.8rem;
+        color: var(--text-accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+    }
+}
+
+.skill-card:hover {
+    background: var(--accent-alpha-10);
+    border-color: var(--accent-alpha-30);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .skill-card {
+        padding: 1rem 2rem;
+
+        .name {
+            font-size: 1.2rem;
+        }
+    }
+}

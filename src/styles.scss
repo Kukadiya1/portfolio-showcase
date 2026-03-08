@@ -1,0 +1,136 @@
+/* Modern Dark Theme and Glassmorphism Utilities */
+
+:root {
+  /* Color Palette - Deep Dark modern tones (Default) */
+  --bg-base: #0a0a0c;
+  --bg-gradient: linear-gradient(135deg, #0a0a0c 0%, #1a1a24 100%);
+
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-accent: #64ffda;
+
+  --accent-glow: rgba(100, 255, 218, 0.4);
+  --accent-alpha-10: rgba(100, 255, 218, 0.1);
+  --accent-alpha-20: rgba(100, 255, 218, 0.2);
+  --accent-alpha-30: rgba(100, 255, 218, 0.3);
+
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  --glass-card-bg: rgba(255, 255, 255, 0.05);
+  --glass-card-border: rgba(255, 255, 255, 0.1);
+  --glass-card-hover-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
+
+  --border-light: rgba(255, 255, 255, 0.05);
+  --footer-bg: rgba(10, 10, 12, 0.95);
+  --hero-card-bg: rgba(20, 20, 25, 0.4);
+
+  --gradient-colors: #f8f9fa, #64ffda;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body.light-theme {
+  /* Light Mode Color Palette */
+  --bg-base: #e2e8f0;
+  --bg-gradient: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-accent: #0284c7;
+  /* Vibrant Blue accent for light mode */
+
+  --accent-glow: rgba(2, 132, 199, 0.4);
+  --accent-alpha-10: rgba(2, 132, 199, 0.1);
+  --accent-alpha-20: rgba(2, 132, 199, 0.2);
+  --accent-alpha-30: rgba(2, 132, 199, 0.3);
+
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+
+  --glass-card-bg: rgba(255, 255, 255, 0.7);
+  --glass-card-border: rgba(255, 255, 255, 0.5);
+  --glass-card-hover-shadow: 0 10px 30px rgba(2, 132, 199, 0.15);
+
+  --border-light: rgba(0, 0, 0, 0.08);
+  --footer-bg: rgba(226, 232, 240, 0.95);
+  --hero-card-bg: rgba(255, 255, 255, 0.8);
+
+  --gradient-colors: #0f172a, #0284c7;
+}
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  background-image: var(--bg-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-card-border);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glass-card-hover-shadow);
+  border-color: var(--accent-alpha-30);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--gradient-colors));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
